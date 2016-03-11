@@ -52,34 +52,28 @@ snippet pt
 	propTypes: {
 		${1}: React.PropTypes.${2:string}
 	}
-snippet rcc
-	/**
-	 * @jsx React.DOM
-	 */
 
-	var React = require('React');
+snippet cmp
+	import React from 'react';
 
-	class _${1:ClassName} {
+	export default class ${1:ClassName} extends React.Component {
 
-		render() {
-			return (
-				${0:<div />}
-			);
-		}
+	  render() {
+	    return (
+	      <div>${2}</div>
+	    );
+	  }
 	};
 
-	module.exports = React.createClass(_$1}.prototype);
-snippet cc
-	class _${1:ClassName} {
+snippet fc
+	import React from 'react';
 
-		render() {
-			return (
-				${0:<div />}
-			);
-		}
+	export default (props) => {
+	    return (
+	      <div>${1}</div>
+	    );
 	};
 
-	export const $1 = React.createClass(_$1.prototype);
 snippet ren
 	render() {
 		return (
