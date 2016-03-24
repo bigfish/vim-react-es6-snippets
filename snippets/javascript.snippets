@@ -56,7 +56,7 @@ snippet pt
 snippet cmp
 	import React from 'react';
 
-	export default class ${1:ClassName} extends React.Component {
+	export default class ${1:`Filename()`} extends React.Component {
 
 	  render() {
 	    return (
@@ -64,7 +64,6 @@ snippet cmp
 	    );
 	  }
 	};
-
 snippet fc
 	import React from 'react';
 
