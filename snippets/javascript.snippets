@@ -50,20 +50,45 @@ snippet jsx
 	 */
 snippet pt
 	propTypes: {
-		${1}: React.PropTypes.${2:string}
+		${1}: PropTypes.${2:string}
 	}
 
 snippet cmp
 	import React from 'react';
+	import PropTypes from 'prop-types';
 
-	export default class ${1:`Filename()`} extends React.Component {
+	class ${1:`Filename()`} extends React.Component {
 
 	  render() {
 	    return (
 	      <div>${2}</div>
 	    );
 	  }
+	}
+
+	$1.propTypes = {
+
 	};
+	export default $1;
+
+snippet pc
+	import  React, { PureComponent } from 'react';
+	import PropTypes from 'prop-types';
+
+	class ${1:`Filename()`} extends PureComponent {
+
+	  render() {
+	    return (
+	      <div>${2}</div>
+	    );
+	  }
+	}
+
+	$1.propTypes = {
+
+	};
+	export default $1;
+
 snippet fc
 	import React from 'react';
 
